@@ -10,9 +10,9 @@ if (existsSync(`.env.${mode}`)) {
     if (m) env[m[1]] = m[2];
   }
 }
-const tag = "v2";
+const tag = "v3";
 mkdirSync("dist/assets", { recursive: true });
-const assets = ["app", "vendor", "style", "router", "store"].map((n) => `assets/${n}-${tag}.js`);
+const assets = ["app"].map((n) => `assets/${n}-${tag}.js`);
 for (const a of assets) writeFileSync(`dist/${a}`, `// ${a}\n`);
 writeFileSync(
   "dist/index.html",
