@@ -1,5 +1,5 @@
 const http = require("node:http");
-const routes = require("./routes");
+const routes = require("./src/routes");
 
 const port = Number(process.env.PORT || 3000);
 http
